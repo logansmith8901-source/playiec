@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PlayIEC - A Gaming Company</title>
+        <link rel="icon" href="./assets/icon.png" type="image/png">
+        <link javascript="text/javascript" href="./assets/script.js" />
+    </head>
+    <body>
+        <div class="main selected">
+            <div class="header">
+                <div class="logo">
+                    <img src="./assets/logo.png" alt="PlayIEC Logo" />
+                    <p>PlayIEC</p>
+                </div>
+                <div class="navbar">
+                    <div class="navlink">
+                        Home
+                    </div>
+                    <div class="navlink">
+                        About
+                    </div>
+                    <div class="navlink">
+                        Contact
+                    </div>
+
+                    <div class="button steam">
+                        Steam
+                    </div>
+
+                    <div class="button epic">
+                        Epic Games
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <h1 class="white">PlayIEC. A Gaming Company</h1>
+                    <p class="gray">Interactive innovative experiences crafted for expansion.</p>
+                    <div>
+                        <h1 class="green">Innovate.</h1>
+                        <h1 class="pink">Create.</h1>
+                        <h1 class="blue">Explore.</h1>
+                    </div>
+                </div>
+                <div class="right">
+                    <img class="qwen" src="./assets/qwen.png" alt="Qwen" />
+                    <div class="colorContainer">
+                        <div class="colorGreen">
+                            -
+                        </div>
+                        <div class="colorPink">
+                            -
+                        </div>
+                        <div class="colorBlue">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="copyright">
+                    PlayIEC @ 2026
+                </p>
+                <div class="socials">
+                    <a href="https://twitter.com/PlayIEC">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h1><PlayIEC Briefing></h1>
+                <p>PlayIEC is a gaming company that creates interactive innovative experiences crafted for expansion.</p>
+                <p>-------------------------------------------------------------------</p>
+                <p>Founded in 2024, PlayIEC has quickly established itself as a leading developer in the gaming industry, known for its commitment to quality and innovation.</p>
+                <p>-------------------------------------------------------------------</p>
+                <p>Our team of talented developers, artists, and designers work tirelessly to create immersive gaming experiences that captivate players around the world.</p>
+                <p>-------------------------------------------------------------------</p>
+                <p>At PlayIEC, we believe in pushing the boundaries of gaming and delivering unforgettable experiences to our players. We are dedicated to creating games that not only entertain but also inspire and connect people through the power of play.</p>
+            </div>
+            <div class="right">
+                <h1>Eleven \-/ Gameplay Trailer</h1>
+                <iframe src="https://www.youtube.com/watch?v=Jdy5Zh-GpmM" title="Eleven Official Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="buttonContainer">
+                    <div class="button steam">
+                        Steam
+                    </div>
+
+                    <div class="button epic">
+                        Epic Games
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h1>Contact Information</h1>
+                <p>PlayIEC is a gaming company that creates interactive innovative experiences crafted for expansion.</p>
+                <p>-------------------------------------------------------------------</p>
+                <p>Marketing Manager: <a href="https://twitter.com/PlayIEC">PlayIEC</a></p>
+                <p>-------------------------------------------------------------------</p>
+                <p>Our team of talented developers, artists, and designers work tirelessly to create immersive gaming experiences that captivate players around the world.</p>
+                <p>-------------------------------------------------------------------</p>
+                <p>Feel free to reach out to us if you have any questions or inquiries. Our team is dedicated to providing you with the best possible support and assistance.</p>
+            </div>
+            <div class="right">
+                <h1>Write To Us</h1>
+                <form>
+                    <input type="text" placeholder="Name" required />
+                    <input type="email" placeholder="Email" required />
+                    <input type="phone" placeholder="phone" required />
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="button steam">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    let selected = 0;
+
+    // Nav Link Functionality
+
+    document.querySelector('.navlink').addEventListener('click', (event) => {
+        let index = Array.from(document.querySelectorAll('.navlink')).indexOf(event.target);
+        updateSelected(index);
+    });
+
+    // Colored Button Navigation
+
+    document.querySelector('.button .steam').addEventListener('click', () => {
+        window.location.href = 'https://store.steampowered.com/app/3813240/Eleven/';
+    });
+
+    document.querySelector('.button .epic').addEventListener('click', () => {
+        window.location.href = 'https://store.epicgames.com/p/eleven-74a8e5?lang=en-US/';
+    });
+
+    // Content Selection Function
+
+    function updateSelected(index) {
+        let query =  Array.from(document.querySelectorAll('.main')).indexOf(index);
+        document.querySelector(query).classList.add('selected');
+        document.querySelectorAll('.main').forEach((element, i) => {
+            if (i !== index) {
+                element.classList.remove('selected');
+            }
+        });
+    }
+</script>
+
+<style type="text/css" scoped>
+    body {
+        background: #0f0f0f;
+        color: #ffffff;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    html {
+        padding: 0px;
+        margin: 0px;
+        height: 100vh;
+        margin: 10px;
+        width: calc(100% - 20px); 
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 20px;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 20px 10px;
+    }
+
+    .header {
+        background: #000000;
+        opacity: 0.8;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navbar {
+        background: #000000;
+        opacity: 0.8;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        padding: 20px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navlink {
+        padding: 0 10px;
+        color: #ffffff;
+    }
+
+    .navlink:hover {
+        cursor: pointer;
+        color: #c0c0c0;
+    }
+
+    .button {
+        border: 0px;
+        border-radius: 10px;
+        padding: 0 10px;
+        color: #ffffff;
+    }
+
+    .button.steam {
+        background: #db0ba3;
+        border: 1px solid #d812b4;
+        color: #ffffff;
+    }
+
+    .button.epic {
+        background: #0bdc2e;
+        border: 1px solid #0ac623;
+        color: #ffffff;
+    }
+
+    .button:hover {
+        cursor: pointer;
+    }
+
+    .main {
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .main.selected {
+        display: flex !important;
+        transition: 0.3s;
+    }
+
+    .main {
+        display: none;
+        transition: 0.3s;
+    }
+
+    .main .left {
+        flex: 1;
+        padding: 20px;
+    
+    }
+
+    .main .right {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+        background: #000000;
+        opacity: 0.8;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content .left {
+        width: 50%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .content .right {
+        width: 50%;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .footer {
+        padding: 20px;
+        background: #000000;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        color: #ffffff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        color: #0bdc2e;
+    }
+
+    .copyright:hover {
+        color: #5ff373;
+        cursor: pointer;
+    }
+
+    a {
+        color: #db0ba3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #ea56c3;
+        cursor: pointer;
+    }
+
+    .green {
+        color: #0bdc2e;
+    }
+
+    .pink {
+        color: #db0ba3;
+    }
+
+    .blue {
+        color: #0bcbdc;
+    }
+
+    .white {
+        color: #ffffff;
+    }
+
+    .gray {
+        color: #c0c0c0;
+    }
+
+    .colorContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+        height: 10px;
+    }
+
+    .colorGreen {
+        width: 30%;
+        height: 10px;
+        background: #0bdc2e;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .colorPink {
+        width: 30%;
+        height: 10px;
+        background: #db0ba3;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 5px;
+    }    
+
+    .colorBlue {
+        width: 30%;
+        height: 10px;
+        background: #0bcbdc;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 5px;
+    }   
+
+    .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .logo p {
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .qwen {
+        height: 500px;
+        width: auto;
+        background: transparent;
+    }
+
+    .qwen:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+
+    iframe {
+        width: 100%;
+        height: 315px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+        background: #333333;
+        color: #ffffff;
+    }
+
+    textarea {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+        background: #333333;
+        color: #ffffff;
+        resize: none;
+    }
+
+    @media (max-width: 1440px) {
+        .main {
+            flex-direction: row;
+        }
+
+        .main .left, .main .right {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .main {
+            flex-direction: row;
+        }
+
+        .main .left, .main .right {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .main {
+            flex-direction: row;
+        }
+
+        .main .left, .main .right {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main {
+            flex-direction: column;
+        }
+
+        .main .left, .main .right {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header, .navbar, .footer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navlink, .button {
+            margin: 5px 0;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .main .right iframe {
+            height: 200px;
+        }
+    }
+</style>
